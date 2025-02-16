@@ -1,3 +1,4 @@
+
 using FifaGames.Models.School;
 using Microsoft.Azure.Functions.Worker.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +9,7 @@ var builder = FunctionsApplication.CreateBuilder(args);
 
 // Add the DbContext and configure the connection string
 builder.Services.AddDbContext<SchoolContext>(options =>
-  options.UseSqlServer(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
+   options.UseSqlServer(Environment.GetEnvironmentVariable("DATABASE_CONNECTION_STRING")));
 
 builder.ConfigureFunctionsWebApplication();
 
